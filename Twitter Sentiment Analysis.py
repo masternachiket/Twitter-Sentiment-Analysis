@@ -3,18 +3,18 @@ import tweepy
 from textblob import TextBlob
 
 
-consumer_key = '61I2LUkkdF2tcgj92NGmvRQCY'
-consumer_secret = 'wifamBJUlKRDZHB7gjmIlBtdoRDL6D0ZinPBppDr3KXIYDXD3x'
+consumer_key = 'Your Consumer Key'
+consumer_secret = 'Your Consumer Secret Key'
 
-access_token = '2998264597-66o8Af3MUUsDaCpNmQ4qKhUIvkIO3Yec9xrU3GU'
-access_token_secret = 'PtQ1d05Q8E3E4fASLHindk30XrCw0M0NoEQf7Tx5XCAMk'
+access_token = 'Your Access Tokens Key'
+access_token_secret = 'Your Access Token Secret Key'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.search("Trump")
+public_tweets = api.search("Key_Word")
 
 for tweet in public_tweets:
     print(tweet.text)
